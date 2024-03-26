@@ -7,22 +7,28 @@ const answer = await inquirer.prompt([
         message: "select one of the operators to perform action! ",
         type: "list",
         name: "operator",
-        choices: ["addition", "subtraction", "multiplication", "division"],
+        choices: ["Addition", "Subtraction", "Multiplication", "Division", "Exponentiation", "Modulus"],
     },
 ]);
 //  conditional statments!
-if (answer.operator === "addition") {
-    console.log(answer.firstNumber + answer.secondtNumber);
+if (answer.operator === "Addition") {
+    console.log(`The answer of ${answer.firstNumber} + ${answer.secondtNumber} is : ${answer.firstNumber + answer.secondtNumber}`);
 }
-else if (answer.operator === "subtraction") {
-    console.log(answer.firstNumber - answer.secondtNumber);
+else if (answer.operator === "Subtraction") {
+    console.log(`The answer of ${answer.firstNumber} - ${answer.secondtNumber} is : ${answer.firstNumber - answer.secondtNumber}`);
 }
-else if (answer.operator === "multiplication") {
-    console.log(answer.firstNumber * answer.secondtNumber);
+else if (answer.operator === "Multiplication") {
+    console.log(`The answer of ${answer.firstNumber} * ${answer.secondtNumber} is : ${answer.firstNumber * answer.secondtNumber}`);
 }
-else if (answer.operator === "division") {
-    console.log(answer.firstNumber / answer.secondtNumber);
+else if (answer.operator === "Division") {
+    console.log(`The answer of ${answer.firstNumber} / ${answer.secondtNumber} is : ${answer.firstNumber / answer.secondtNumber}`);
+}
+else if (answer.operator === "Exponentiation") {
+    console.log(`The answer of ${answer.firstNumber} ** ${answer.secondtNumber} is : ${answer.firstNumber ** answer.secondtNumber}`);
+}
+else if (answer.operator === "Modulus") {
+    console.log(`The answer of ${answer.firstNumber} % ${answer.secondtNumber} is : ${answer.firstNumber % answer.secondtNumber}`);
 }
 else {
-    console.log("please select volid operator!");
+    console.log(`please select volid operator!`);
 }
